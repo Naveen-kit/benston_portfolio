@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Benston — CS Engineer & Python Developer</title>
+<meta name="description" content="Benston — First-year CS Engineering student passionate about Python and building innovative solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="dot"></div>
+<div id="ring"></div>
+<div class="noise" aria-hidden="true"></div>
+<div class="orb orb1" aria-hidden="true"></div>
+<div class="orb orb2" aria-hidden="true"></div>
+<div class="orb orb3" aria-hidden="true"></div>
+<canvas id="cvs" aria-hidden="true"></canvas>
+
+<!-- LOADER -->
+<div id="loader" aria-label="Loading" role="status">
+  <div class="ld-logo">Benston.dev</div>
+  <div class="ld-track"><div class="ld-prog" id="lprog"></div></div>
+  <div class="ld-pct" id="lpct">0%</div>
+</div>
+
+<!-- DRAWER NAV -->
+<div class="drawer" id="drawer" aria-label="Menu">
+  <a href="#about" class="dl"><span class="drawer-num">01 —</span>About</a>
+  <a href="#skills" class="dl"><span class="drawer-num">02 —</span>Skills</a>
+  <a href="#projects" class="dl"><span class="drawer-num">03 —</span>Projects</a>
+  <a href="#education" class="dl"><span class="drawer-num">04 —</span>Education</a>
+  <a href="#achievements" class="dl"><span class="drawer-num">05 —</span>Wins</a>
+  <a href="#contact" class="dl"><span class="drawer-num">06 —</span>Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nl"><span class="nl-pulse" aria-hidden="true"></span>Benston</div>
+  <div class="nr">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="hbg" id="hbg" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <!-- Avatar -->
+  <div class="hero-avatar" role="img" aria-label="Benston profile">
+    <div class="av-ring" aria-hidden="true"></div>
+    <div class="av-gap" aria-hidden="true"></div>
+    <div class="av-img">
+      <img src="benston_pic.jpg" alt="Benston" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+    </div>
+    <div class="av-status" aria-label="Available" title="Open to internships">✓</div>
+  </div>
+
+  <div class="hero-chip">
+    <span class="hero-chip-dot" aria-hidden="true"></span>
+    Open to internships · Tamil Nadu
+  </div>
+
+  <h1 class="hero-name">
+    <span class="n1">Hi, I'm</span>
+    <span class="n2">Benston</span>
+  </h1>
+
+  <p class="hero-role">CS Engineer &nbsp;·&nbsp; Python Developer</p>
+
+  <div class="hero-typed-row" aria-live="polite">
+    <span class="prompt">$&gt;</span>
+    <span id="typed"></span><span class="cursor-blink" aria-hidden="true">_</span>
+  </div>
+
+  <div class="hero-tags">
+    <span class="htag a">Python</span>
+    <span class="htag b">Problem Solving</span>
+    <span class="htag c">Data Science</span>
+    <span class="htag">DSA</span>
+    <span class="htag">Pandas</span>
+  </div>
+
+  <div class="hero-btns">
+    <a href="#projects" class="btn btn-solid">View Projects →</a>
+    <a href="mailto:benston895@gmail.com" class="btn btn-out">Hire Me</a>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>scroll</span>
+    <div class="scroll-track"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="sec">
+  <div class="wrap">
+    <div class="inner">
+      <div class="about-text rv">
+        <div class="eyebrow">01 · About</div>
+        <h2 class="h2">Coding the<br><span>Future</span></h2>
+        <p class="subdesc" style="margin-top:1rem">First-year CS Engineering student at St. Xavier's Catholic College of Engineering. Passionate about Python programming and building practical solutions that solve real-world problems.</p>
+        <p class="subdesc" style="margin-top:.8rem">From data manipulation with pandas, to visualization with matplotlib — and next stop: Flask, Django, and Machine Learning.</p>
+        <div class="spec-row">
+          <span class="spec">English</span>
+          <span class="spec">Tamil</span>
+          <span class="spec">Python 🐍</span>
+          <span class="spec">MS Office</span>
+        </div>
+      </div>
+      <div class="about-cards rv" style="transition-delay:.15s">
+        <div class="acard">
+          <span class="acard-ico">🐍</span>
+          <div class="acard-t">Python Dev</div>
+          <div class="acard-d">Basics to intermediate · OOP · functions · loops · conditionals</div>
+        </div>
+        <div class="acard">
+          <span class="acard-ico">📊</span>
+          <div class="acard-t">Data Tools</div>
+          <div class="acard-d">pandas · matplotlib · data manipulation & visualization</div>
+        </div>
+        <div class="acard">
+          <span class="acard-ico">🧩</span>
+          <div class="acard-t">Problem Solving</div>
+          <div class="acard-d">DSA · algorithms · logical thinking · complex challenges</div>
+        </div>
+        <div class="acard">
+          <span class="acard-ico">🚀</span>
+          <div class="acard-t">Next Goals</div>
+          <div class="acard-d">Flask · Django · Machine Learning · full-stack apps</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="sec">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;display:flex;flex-direction:column;align-items:center">
+      <div class="eyebrow" style="justify-content:center;margin-bottom:1rem"><span style="display:none"></span>02 · Skills</div>
+      <h2 class="h2">Tech <span>Arsenal</span></h2>
+      <p class="subdesc" style="margin-top:.8rem;text-align:center">Tools and technologies I work with every day.</p>
+    </div>
+    <div class="sk-grid">
+      <div class="sk rv" style="transition-delay:.0s"><span class="sk-ico">🐍</span><span class="sk-nm">Python</span><div class="sk-bar"><div class="sk-fill" data-w="75"></div></div><span class="sk-lv">Intermediate</span></div>
+      <div class="sk rv" style="transition-delay:.04s"><span class="sk-ico">🧮</span><span class="sk-nm">DSA</span><div class="sk-bar"><div class="sk-fill" data-w="65"></div></div><span class="sk-lv">Learning</span></div>
+      <div class="sk rv" style="transition-delay:.08s"><span class="sk-ico">🐼</span><span class="sk-nm">Pandas</span><div class="sk-bar"><div class="sk-fill" data-w="60"></div></div><span class="sk-lv">Familiar</span></div>
+      <div class="sk rv" style="transition-delay:.12s"><span class="sk-ico">📈</span><span class="sk-nm">Matplotlib</span><div class="sk-bar"><div class="sk-fill" data-w="55"></div></div><span class="sk-lv">Familiar</span></div>
+      <div class="sk rv" style="transition-delay:.16s"><span class="sk-ico">🧩</span><span class="sk-nm">Problem Solving</span><div class="sk-bar"><div class="sk-fill" data-w="80"></div></div><span class="sk-lv">Strong</span></div>
+      <div class="sk rv" style="transition-delay:.2s"><span class="sk-ico">📄</span><span class="sk-nm">MS Office</span><div class="sk-bar"><div class="sk-fill" data-w="85"></div></div><span class="sk-lv">Proficient</span></div>
+      <div class="sk rv" style="transition-delay:.24s"><span class="sk-ico">🌐</span><span class="sk-nm">Web Dev</span><div class="sk-bar"><div class="sk-fill" data-w="35"></div></div><span class="sk-lv">Exploring</span></div>
+      <div class="sk rv" style="transition-delay:.28s"><span class="sk-ico">🤖</span><span class="sk-nm">Machine Learning</span><div class="sk-bar"><div class="sk-fill" data-w="20"></div></div><span class="sk-lv">Next Goal</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="sec">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">03 · Projects</div>
+      <h2 class="h2">Built with <span>Purpose</span></h2>
+      <p class="subdesc" style="margin-top:.8rem">Real projects built to sharpen skills and solve practical problems.</p>
+    </div>
+    <div class="pj-grid">
+      <div class="pj rv" style="transition-delay:.0s">
+        <div class="pj-top pj-t1"><span class="pj-n">PROJECT_01</span><span class="pj-ico">📊</span></div>
+        <div class="pj-body">
+          <div class="pj-title">Grade Calculator</div>
+          <div class="pj-desc">Averages marks across subjects and assigns letter grades. Includes input validation and clean formatted output.</div>
+          <div class="pj-tags"><span class="pt">Python</span><span class="pt">Functions</span><span class="pt">Logic</span></div>
+          <a href="#" class="pj-link">View Code <span class="pj-arr">→</span></a>
+        </div>
+      </div>
+      <div class="pj rv" style="transition-delay:.1s">
+        <div class="pj-top pj-t2"><span class="pj-n">PROJECT_02</span><span class="pj-ico">✅</span></div>
+        <div class="pj-body">
+          <div class="pj-title">To-Do Manager</div>
+          <div class="pj-desc">CLI task manager with add, remove, complete, and list features. Designed for practical everyday productivity.</div>
+          <div class="pj-tags"><span class="pt">Python</span><span class="pt">CLI</span><span class="pt">OOP</span></div>
+          <a href="#" class="pj-link">View Code <span class="pj-arr">→</span></a>
+        </div>
+      </div>
+      <div class="pj rv" style="transition-delay:.2s">
+        <div class="pj-top pj-t3"><span class="pj-n">PROJECT_03</span><span class="pj-ico">🌐</span></div>
+        <div class="pj-body">
+          <div class="pj-title">Web App — Soon</div>
+          <div class="pj-desc">Next milestone: a full-stack web application with Flask or Django, real database, and a polished user interface.</div>
+          <div class="pj-tags"><span class="pt">Flask</span><span class="pt">Django</span><span class="pt">In Progress</span></div>
+          <a href="#" class="pj-link">Stay Tuned <span class="pj-arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="sec">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">04 · Education</div>
+      <h2 class="h2">The <span>Journey</span></h2>
+    </div>
+    <div class="tl rv" style="transition-delay:.1s">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-yr">2024 — Present</div>
+        <div class="tl-title">B.E. Computer Science Engineering</div>
+        <div class="tl-place">St. Xavier's Catholic College of Engineering</div>
+        <div class="tl-desc">Diving deep into programming fundamentals, data structures, algorithms, and building real Python projects. Expected graduation 2028.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-yr">2022 — 2024</div>
+        <div class="tl-title">Higher Secondary Certificate (HSC)</div>
+        <div class="tl-place">Bethlehem Matric Higher Secondary School</div>
+        <div class="tl-desc">Strong foundation in science and mathematics. Developed early passion for logic, problem solving, and programming.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-yr">Ongoing</div>
+        <div class="tl-title">Self-Directed Learning</div>
+        <div class="tl-place">Independent · Online Platforms</div>
+        <div class="tl-desc">Actively exploring pandas, matplotlib. Next: Flask, Django, Machine Learning. Gained confidence tackling complex problems independently.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="sec">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;display:flex;flex-direction:column;align-items:center">
+      <div class="eyebrow" style="justify-content:center">05 · Achievements</div>
+      <h2 class="h2">Milestones <span>Unlocked</span></h2>
+    </div>
+    <div class="ach-grid">
+      <div class="ach rv"><span class="ach-ico">🐍</span><span class="ach-n" data-target="2">0</span><span class="ach-l">Python Projects</span></div>
+      <div class="ach rv" style="transition-delay:.08s"><span class="ach-ico">📚</span><span class="ach-n" data-target="3">0</span><span class="ach-l">Libraries Explored</span></div>
+      <div class="ach rv" style="transition-delay:.16s"><span class="ach-ico">🌐</span><span class="ach-n" data-target="2">0</span><span class="ach-l">Languages Spoken</span></div>
+      <div class="ach rv" style="transition-delay:.24s"><span class="ach-ico">🎯</span><span class="ach-n" data-target="100">0</span><span class="ach-l">% Drive to Learn</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec">
+  <div class="wrap">
+    <div class="hd rv">
+      <div class="eyebrow">06 · Contact</div>
+      <h2 class="h2">Let's <span>Connect</span></h2>
+      <p class="subdesc" style="margin-top:.8rem;text-align:center">Open to opportunities, collaborations, and conversations about technology.</p>
+    </div>
+    <div class="ct-grid rv" style="transition-delay:.1s">
+      <div class="ct"><span class="ct-ico">📞</span><div><div class="ct-lbl">Phone</div><div class="ct-val"><a href="tel:+919363602716">+91 93636 02716</a></div></div></div>
+      <div class="ct"><span class="ct-ico">✉️</span><div><div class="ct-lbl">Email</div><div class="ct-val"><a href="mailto:benston895@gmail.com">benston895@gmail.com</a></div></div></div>
+      <div class="ct"><span class="ct-ico">📍</span><div><div class="ct-lbl">Location</div><div class="ct-val">Tamil Nadu, India</div></div></div>
+      <div class="ct"><span class="ct-ico">💼</span><div><div class="ct-lbl">Status</div><div class="ct-val" style="color:var(--a)">Open to Internships ✓</div></div></div>
+    </div>
+    <div class="ct-cta rv" style="transition-delay:.2s">
+      <a href="mailto:benston895@gmail.com" class="btn btn-solid">Send a Message →</a>
+      <a href="tel:+919363602716" class="btn btn-out">Call Me</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft">© 2025 Benston <span>·</span> All rights reserved</div>
+  <div class="ft">Built with <span>♥</span> and Python curiosity</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
